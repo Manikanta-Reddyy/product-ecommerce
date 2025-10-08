@@ -105,15 +105,4 @@ public class ProductServiceImplementation implements ProductService {
         productCacheService.delete(id);
     }
 
-    @Override
-    public void productCacheSync() {
-        List<Product> products = productRepository.findAll();
-
-        List<ProductDto> dto = products.stream()
-                .map(productMapper::toDto)
-                .collect(Collectors.toList());
-
-        productCacheService.putAll(dto);
-    }
-
 }
