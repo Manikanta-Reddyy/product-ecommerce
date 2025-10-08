@@ -9,6 +9,7 @@ import org.mapstruct.Mapping;
 public interface OrderItemMapper {
 
     @Mapping(target = "productId", source = "product.id")
+    @Mapping(target = "unitPrice", source = "unitPrice")
     OrderItemDto toDto(OrderItem orderItem);
 
     @Mapping(target = "product", ignore = true)

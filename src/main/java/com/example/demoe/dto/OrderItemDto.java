@@ -20,6 +20,8 @@ public class OrderItemDto {
     @NotNull(message = "Product Id is required")
     private Long productId;
 
+    private BigDecimal unitPrice;
+
     @NotNull(message = "Quantity is required")
     @Positive(message = "Quantity must be greater than zero")
     private Integer quantity;
